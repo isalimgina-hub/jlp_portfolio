@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Janissah Punginagina — Civil and Structural Engineer portfolio. Structural design, civil infrastructure, engineering drafting, foundations, quantity takeoff, and geotechnical analysis.">
+  <meta property="og:title" content="Janissah Punginagina | Civil & Structural Engineer">
+  <meta property="og:description" content="Professional engineering portfolio of Janissah Punginagina.">
+  <title>Janissah Punginagina | Civil & Structural Engineer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --ink:#101820; --muted:#5d6872; --line:#dfe5e9; --paper:#f7f9fa;
+      --white:#fff; --accent:#1d5f86; --accent-dark:#123d57;
+      --max:1180px; --shadow:0 18px 50px rgba(16,24,32,.08);
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{font-family:Inter,Arial,sans-serif;color:var(--ink);background:var(--white);line-height:1.6}
+    a{color:inherit;text-decoration:none}
+    img{max-width:100%;display:block}
+    button{font:inherit}
+    .container{width:min(calc(100% - 40px),var(--max));margin:auto}
+    .grid-bg{background-image:linear-gradient(rgba(29,95,134,.055) 1px,transparent 1px),linear-gradient(90deg,rgba(29,95,134,.055) 1px,transparent 1px);background-size:32px 32px}
+    header{position:fixed;inset:0 0 auto 0;z-index:100;background:rgba(255,255,255,.94);backdrop-filter:blur(14px);border-bottom:1px solid rgba(223,229,233,.9)}
+    .nav{height:74px;display:flex;align-items:center;justify-content:space-between}
+    .brand{font-family:"Space Grotesk",sans-serif;font-weight:700;letter-spacing:.02em}
+    .brand span{display:block;font:500 10px Inter,sans-serif;color:var(--muted);letter-spacing:.16em;text-transform:uppercase;margin-top:-2px}
+    .nav-links{display:flex;gap:25px;align-items:center;font-size:13px;font-weight:600}
+    .nav-links a{color:#39444c}.nav-links a:hover{color:var(--accent)}
+    .menu{display:none;border:0;background:none;font-size:25px;cursor:pointer}
+    section{padding:105px 0}
+    .hero{min-height:100vh;padding-top:150px;display:flex;align-items:center;position:relative;overflow:hidden;background:var(--paper)}
+    .hero-grid{display:grid;grid-template-columns:1.25fr .75fr;gap:70px;align-items:center}
+    .eyebrow{font-size:12px;letter-spacing:.18em;text-transform:uppercase;font-weight:800;color:var(--accent);margin-bottom:18px}
+    h1{font-family:"Space Grotesk",sans-serif;font-size:clamp(48px,7vw,82px);line-height:.98;letter-spacing:-.055em;margin-bottom:25px}
+    .hero h1 em{font-style:normal;color:var(--accent)}
+    .lead{font-size:18px;color:#4e5b64;max-width:720px}
+    .actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:32px}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:13px 18px;border:1px solid var(--ink);font-weight:700;font-size:13px;transition:.2s}
+    .btn.primary{background:var(--ink);color:#fff}.btn.primary:hover{background:var(--accent);border-color:var(--accent)}
+    .btn.light{background:#fff}.btn.light:hover{border-color:var(--accent);color:var(--accent)}
+    .hero-card{border:1px solid var(--line);background:#fff;padding:28px;box-shadow:var(--shadow);position:relative}
+    .hero-card:before{content:"STRUCTURAL / CIVIL";font:700 10px Inter,sans-serif;letter-spacing:.16em;color:var(--accent);position:absolute;top:15px;right:18px}
+    .drawing{height:310px;position:relative;overflow:hidden;background:#fafcfd;border:1px solid var(--line)}
+    .drawing:before,.drawing:after{content:"";position:absolute;inset:35px;border:1px solid #cbd6dc}
+    .drawing:after{inset:80px 45px;border-color:#aebfc9}
+    .beam{position:absolute;background:var(--accent);opacity:.8}.beam.one{height:4px;left:20%;right:16%;top:46%}.beam.two{height:4px;left:20%;right:16%;top:68%}.beam.three{width:4px;top:31%;bottom:24%;left:31%}.beam.four{width:4px;top:31%;bottom:24%;right:31%}
+    .dimension{position:absolute;font-size:10px;color:#75848d;letter-spacing:.08em}.dimension.a{top:18px;left:50%}.dimension.b{bottom:20px;left:50%}
+    .section-title{font-family:"Space Grotesk",sans-serif;font-size:clamp(32px,4vw,50px);letter-spacing:-.035em;line-height:1.05;margin-bottom:15px}
+    .section-intro{max-width:700px;color:var(--muted);margin-bottom:42px}
+    .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:65px}
+    .facts{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line);border:1px solid var(--line)}
+    .fact{background:#fff;padding:24px}.fact strong{display:block;font:700 28px "Space Grotesk";margin-bottom:3px}.fact span{font-size:12px;color:var(--muted)}
+    .service-grid,.skill-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+    .card{border:1px solid var(--line);padding:27px;background:#fff;transition:.2s}.card:hover{transform:translateY(-3px);box-shadow:var(--shadow);border-color:#c2d2dc}
+    .card-num{font:700 11px "Space Grotesk";color:var(--accent);letter-spacing:.12em;margin-bottom:25px}
+    .card h3{font:700 19px "Space Grotesk";margin-bottom:9px}.card p,.card li{font-size:13px;color:var(--muted)}
+    .card ul{padding-left:17px;margin-top:10px}
+    .skills{background:var(--paper)}
+    .skill-grid{grid-template-columns:repeat(4,1fr)}
+    .skill-list{list-style:none}.skill-list li{padding:8px 0;border-bottom:1px solid var(--line)}
+    .timeline{position:relative;margin-top:15px}.timeline:before{content:"";position:absolute;left:12px;top:0;bottom:0;width:1px;background:var(--line)}
+    .job{position:relative;padding:0 0 45px 45px}.job:before{content:"";position:absolute;left:6px;top:7px;width:13px;height:13px;border:3px solid var(--accent);background:#fff;border-radius:50%}
+    .job-date{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);font-weight:800}.job h3{font:700 22px "Space Grotesk";margin-top:5px}.company{font-size:13px;color:var(--muted);margin-bottom:12px}.job ul{padding-left:18px;color:var(--muted);font-size:14px}
+    .projects-head{display:flex;align-items:end;justify-content:space-between;gap:30px;margin-bottom:30px}.filters{display:flex;flex-wrap:wrap;gap:7px}
+    .filter{border:1px solid var(--line);background:#fff;padding:8px 12px;font-size:11px;font-weight:800;cursor:pointer}.filter.active,.filter:hover{background:var(--ink);color:#fff;border-color:var(--ink)}
+    .project-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+    .project{border:1px solid var(--line);background:#fff;overflow:hidden;display:flex;flex-direction:column}.project.hidden{display:none}
+    .project-preview{height:190px;background:#f2f5f6;position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center}
+    .project-preview iframe{width:100%;height:100%;border:0;pointer-events:none;transform:scale(1.04)}
+    .project-preview .blueprint{width:86%;height:75%;border:1px solid #9db1bd;position:relative;background:#fbfcfd}
+    .blueprint:before,.blueprint:after{content:"";position:absolute;border:1px solid #b4c4cc}.blueprint:before{inset:15px}.blueprint:after{inset:40px 25px}
+    .project-body{padding:20px}.tag{font-size:10px;font-weight:800;letter-spacing:.13em;text-transform:uppercase;color:var(--accent)}.project h3{font:700 19px "Space Grotesk";margin:5px 0 7px}.project p{font-size:12px;color:var(--muted);min-height:58px}.project-link{display:inline-block;margin-top:15px;font-size:12px;font-weight:800;color:var(--accent)}
+    .resume{background:var(--ink);color:#fff}.resume .section-title{color:#fff}.resume .section-intro{color:#aebbc3}.resume-box{display:grid;grid-template-columns:1fr auto;gap:30px;align-items:center;border:1px solid #34434d;padding:30px;background:#17232b}.resume .btn.light{background:#fff;border-color:#fff}
+    .contact{background:var(--paper)}.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px}.contact-info{border-top:1px solid var(--line)}.contact-row{padding:18px 0;border-bottom:1px solid var(--line)}.contact-row small{display:block;color:var(--muted);font-size:10px;letter-spacing:.13em;text-transform:uppercase;font-weight:800}.contact-row a{font-weight:700}
+    footer{padding:30px 0;border-top:1px solid var(--line);font-size:12px;color:var(--muted)}.footer-inner{display:flex;justify-content:space-between;gap:20px}
+    .modal{position:fixed;inset:0;background:rgba(8,14,18,.82);z-index:200;display:none;align-items:center;justify-content:center;padding:25px}.modal.open{display:flex}.modal-box{width:min(1100px,100%);height:min(90vh,850px);background:#fff;display:flex;flex-direction:column}.modal-head{padding:13px 17px;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;align-items:center}.modal-head strong{font-family:"Space Grotesk"}.close{border:0;background:none;font-size:25px;cursor:pointer}.modal iframe{flex:1;width:100%;border:0}
+    @media(max-width:900px){.hero-grid,.about-grid,.contact-grid{grid-template-columns:1fr}.service-grid{grid-template-columns:1fr 1fr}.skill-grid{grid-template-columns:1fr 1fr}.project-grid{grid-template-columns:1fr 1fr}.hero-card{display:none}}
+    @media(max-width:680px){.container{width:min(calc(100% - 28px),var(--max))}.nav{height:66px}.menu{display:block}.nav-links{display:none;position:absolute;top:66px;left:0;right:0;background:#fff;border-bottom:1px solid var(--line);padding:18px;flex-direction:column;align-items:flex-start}.nav-links.open{display:flex}section{padding:78px 0}.hero{padding-top:120px}.hero-grid{gap:20px}.service-grid,.skill-grid,.project-grid{grid-template-columns:1fr}.projects-head{display:block}.filters{margin-top:20px}.resume-box{grid-template-columns:1fr}.footer-inner{display:block}.footer-inner div+div{margin-top:10px}h1{font-size:50px}}
+
+/* BEIGE EDITORIAL PORTFOLIO THEME — October 2026 */
+:root{--ink:#352f29;--muted:#756b61;--line:#ded4c7;--paper:#f4efe7;--white:#fbf8f2;--accent:#94745d;--accent-dark:#5c483a;--max:1180px;--shadow:0 18px 45px rgba(71,51,36,.08)}
+html{scroll-padding-top:78px}body{font-family:'DM Sans',Arial,sans-serif;background:var(--white);color:var(--ink);line-height:1.75}
+h1,h2,.section-title,.job h3,.card h3,.project h3,.brand,.modal-head strong{font-family:'DM Serif Display',Georgia,serif!important;font-weight:400!important;letter-spacing:-.025em!important}
+header{background:rgba(251,248,242,.96);border-bottom:1px solid var(--line);backdrop-filter:blur(18px)}
+.nav{height:84px}.brand{font-size:24px;letter-spacing:-.02em!important}.brand span{font:500 9px 'DM Sans',sans-serif;letter-spacing:.23em;margin-top:-5px;color:var(--accent)}
+.nav-links{gap:22px;font-size:11px;letter-spacing:.11em;text-transform:uppercase}.nav-links a{color:var(--ink)}.nav-links a:hover{color:var(--accent)}
+section{padding:112px 0}.hero{min-height:88vh;padding-top:160px;padding-bottom:100px;background:#eee5d8}.grid-bg{background-image:none}
+.hero-grid{grid-template-columns:1.4fr .6fr;gap:55px}.eyebrow{color:var(--accent);font-size:11px;font-weight:700;letter-spacing:.2em;margin-bottom:22px}
+h1{font-size:clamp(66px,9.5vw,132px);line-height:.91;letter-spacing:-.06em!important;margin-bottom:34px;max-width:800px}.hero h1 em{font-style:italic;color:#97765c}
+.lead{font-size:15px;line-height:1.95;max-width:750px;color:#655a50}.actions{margin-top:38px}
+.btn{border-color:var(--ink);padding:14px 24px;font-size:11px;text-transform:uppercase;letter-spacing:.11em;font-weight:700;transition:.25s;border-radius:0}.btn.primary{background:var(--ink);color:var(--white)}.btn.primary:hover{background:var(--accent);border-color:var(--accent)}.btn.light{background:transparent}.btn.light:hover{background:var(--ink);color:var(--white)}
+.hero-card{background:#e0d1bd;border:0;padding:20px;box-shadow:18px 18px 0 #d5c3ae;transform:rotate(1.2deg)}.hero-card:before{content:'DESIGN / DETAIL / BUILD';color:var(--accent-dark);top:12px;right:15px}
+.drawing{height:350px;background:#f7f1e8;border:1px solid #b6a491}.drawing:before,.drawing:after,.blueprint:before,.blueprint:after{border-color:#b6a491}.beam{background:#927760}.dimension{color:#87715e}
+.section-title{font-size:clamp(42px,5vw,70px);line-height:1.05;margin-bottom:24px}.section-intro{font-size:15px;line-height:1.95;color:var(--muted)}
+.about-grid{gap:90px}.facts{background:var(--line);border:1px solid var(--line)}.fact{background:#f6f0e7;padding:28px}.fact strong{font:400 31px 'DM Serif Display',Georgia,serif;color:var(--ink)}.fact span{font-size:11px;letter-spacing:.04em}
+#services{background:#eee5d8}.service-grid,.skill-grid{gap:18px}.card{border:1px solid var(--line);background:#fbf8f2;padding:30px;box-shadow:none}.card:hover{border-color:#bba791;box-shadow:0 12px 30px rgba(66,47,32,.07)}.card-num,.tag{color:var(--accent);font-size:10px;letter-spacing:.18em}.card h3{font-size:27px}.card p,.card li{color:#766a5f;line-height:1.9}
+.skills{background:#f8f4ed}.skill-list li{border-color:var(--line)}
+.job{padding-bottom:52px}.job:before{border-color:var(--accent)}.job-date{color:var(--accent);font-size:10px}.job h3{font-size:32px}.company{color:#8d7663}.job ul{line-height:1.9}
+#projects{background:#eee5d8}.project-grid{gap:20px}.project{background:var(--white);border-color:#d9cbb9}.project-preview{background:#e6d8c6;height:205px}.project-preview .blueprint{border-color:#aa9781;background:#f6efe5}.project-body{padding:25px}.project h3{font-size:27px;line-height:1.18}.project p{font-size:12px;line-height:1.8}.project-link{color:var(--accent-dark);letter-spacing:.11em;font-size:10px}.filter{background:transparent;border-color:#cbb9a5;color:var(--ink);font-size:10px;letter-spacing:.08em;padding:10px 13px}.filter.active,.filter:hover{background:var(--ink);border-color:var(--ink);color:var(--white)}
+.resume{background:#463a31}.resume-box{background:#54463b;border-color:#756357;padding:45px}.resume .section-intro{color:#dfd1c2}.resume .btn.light{background:#f8f2e9;border-color:#f8f2e9;color:var(--ink)}
+.contact{background:#eee5d8}.contact-row{border-color:#d5c6b5}.contact-info{border-color:#d5c6b5}footer{background:#f6f0e8;border-color:#d5c6b5}
+.modal{background:rgba(41,31,24,.85)}.modal-box{background:var(--white)}.modal-head{border-color:var(--line)}
+@media(max-width:900px){.hero-grid{grid-template-columns:1fr}.hero-card{display:none}.about-grid{gap:38px}}
+@media(max-width:680px){.nav{height:66px}.nav-links{background:var(--white)}.hero{min-height:auto;padding-top:135px;padding-bottom:75px}h1{font-size:clamp(60px,14vw,88px)}.lead{font-size:14px}.section-title{font-size:44px}section{padding:78px 0}.resume-box{padding:28px}.project-preview{height:180px}.facts{grid-template-columns:1fr 1fr}}
+
+/* Readability refinement: darker text while preserving the beige theme */
+:root{--ink:#28231f;--muted:#51483f;--accent:#77543e;--accent-dark:#453126}
+.lead,.section-intro,.card p,.card li,.job ul,.project p,.company,.fact span,
+.contact-row small,.contact-row span,.skill-list li,footer,.dimension{color:#51483f}
+.lead{color:#443a32}.card p,.card li{color:#51483f}.company{color:#594738}
+.nav-links a{color:#332b25}.hero h1 em{color:#765039}
+.resume .section-intro{color:#f0e7dc}
+
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="container nav">
+    <a class="brand" href="#home">JP<span>Civil & Structural Engineer</span></a>
+    <button class="menu" aria-label="Open navigation" onclick="toggleMenu()">☰</button>
+    <nav class="nav-links" id="navLinks">
+      <a href="#about">About</a><a href="#services">Services</a><a href="#skills">Skills</a>
+      <a href="#experience">Experience</a><a href="#projects">Projects</a><a href="#resume">Resume</a><a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+<section class="hero grid-bg" id="home">
+  <div class="container hero-grid">
+    <div>
+      <div class="eyebrow">Civil / Structural Engineering / BIM / Estimator • Technical Remote Support</div>
+      <h1>Hi, <em>I am Janissah!</em></h1>
+      <p class="lead">Civil/Structural Engineer with 3+ years of experience in structural analysis, design, and construction documentation for buildings and infrastructure projects. Experienced in reinforced concrete and steel design, foundation engineering, transmission and substation structures, bridges, and slope protection works. Proficient in STAAD.Pro and Autodesk Revit for structural analysis, BIM modeling, reinforcement detailing, and preparation of construction drawings. Skilled in evaluating structural loads, reviewing engineering designs, and coordinating with multidisciplinary teams. Knowledgeable in NSCP, ACI 318, AISC, ASCE 7, and AASHTO LRFD standards, with a focus on producing safe, practical, and code-compliant structural designs.</p>
+      <div class="actions">
+        <a class="btn primary" href="#projects">View My Projects →</a>
+        <a class="btn light" href="assets/resume/RESUME_Punginagina.pdf" target="_blank">Download Resume</a>
+      </div>
+    </div>
+    <div class="hero-card">
+      <div class="drawing" aria-label="Abstract engineering drawing">
+        <span class="dimension a">ELEVATION / STRUCTURAL</span>
+        <span class="dimension b">PLAN • SECTION • DETAIL</span>
+        <i class="beam one"></i><i class="beam two"></i><i class="beam three"></i><i class="beam four"></i>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="about">
+  <div class="container">
+    <div class="about-grid">
+      <div>
+        <div class="eyebrow">01 — About</div>
+        <h2 class="section-title">Delivering Structural Engineering Solutions Through Design, Analysis, and BIM.</h2>
+        <p class="section-intro">I provide structural design, analysis, and technical documentation for building and infrastructure projects. My experience covers transmission and substation structures, bridges, foundations, flood-control systems, and slope protection works. My responsibilities include structural analysis, preparing detailed engineering drawings, reviewing structural plans, quantity estimation, and developing structural BIM models using Autodesk Revit.</p>
+        <p class="section-intro">My work involves preparing structural designs and construction drawings, coordinating with other engineering disciplines, and checking design details against project requirements and applicable standards. I also work with BIM tools to develop structural models, reinforcement details, and coordinated project documentation.</p>
+      </div>
+      <div class="facts">
+        <div class="fact"><strong>3+ </strong><span> Working Experience</span></div>
+        <div class="fact"><strong>STAAD / ETABS and more</strong><span>Structural Analysis</span></div>
+        <div class="fact"><strong>AutoCAD / Revit </strong><span>Engineering drafting & design</span></div>
+        <div class="fact"><strong> Bluebeam/ Planswift</strong><span>Quantity Takeoff</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="services" class="grid-bg">
+  <div class="container">
+    <div class="eyebrow">02 — Services</div>
+    <h2 class="section-title">Professional Services</h2>
+    <div class="service-grid">
+      <article class="card"><div class="card-num">01 / STRUCTURAL</div><h3>Structural Design & Analysis</h3><ul><li>Steel Design</li><li>Reinforced Concrete Design</li></ul></article>
+      <article class="card"><div class="card-num">02 / DRAFTING</div><h3>Engineering Drafting</h3><ul><li>AutoCAD/Revit Drafting</li><li>Structural Detailing</li><li>Rebar Detailing</li><li>Shop drawing review</li></ul></article>
+      <article class="card"><div class="card-num">03 / CIVIL</div><h3>Civil Infrastructure</h3><ul><li>Flood-control Infrastructure</li><li>Drainage and Box Culverts</li><li>Concrete Roadways</li><li>Road Alignment</li><li>Bridge-related design support</li></ul></article>
+      <article class="card"><div class="card-num">04 / GEOTECHNICAL</div><h3>Stability Analysis</h3><ul><li>GEO5 Slope Stability</li><li>PLAXIS Analysis</li><li>Soil investigation interpretation</li></ul></article>
+      <article class="card"><div class="card-num">05 / ESTIMATION</div><h3>Quantity Takeoff</h3><ul><li>Bill of Quantities</li><li>PlanSwift Takeoff</li><li>Bluebeam Takeoff</li><li>Cost estimation support</li></ul></article>
+      <article class="card"><div class="card-num">06 / COORDINATION</div><h3>Technical Documentation</h3><ul><li>Drawing Review</li><li>Design Coordination</li><li>Engineering Documentation</li></ul></article>
+    </div>
+  </div>
+</section>
+
+<section id="skills" class="skills">
+  <div class="container">
+    <div class="eyebrow">03 — Technical Skills</div>
+    <h2 class="section-title">Tools & technical capabilities</h2>
+       <div class="skill-grid">
+      <article class="card"><h3>Structural Design</h3><ul class="skill-list"><li>AutoCAD</li><li>STAAD.Pro</li><li>RAM</li><li>IDEA StatiCa</li><li>RCDC</li><li>Etabs</li><li>SpColumn</li><li>Autodesk Revit</li></ul></article>
+      <article class="card"><h3>Geotechnical</h3><ul class="skill-list"><li>GEO5</li><li>PLAXIS</li></ul></article>
+      <article class="card"><h3>Estimation</h3><ul class="skill-list"><li>PlanSwift</li><li>Bluebeam</li><li>Excel Spreadsheets</li></ul></article>
+      <article class="card"><h3>Codes & Standards</h3><ul class="skill-list"><li>NSCP</li><li>ACI</li><li>AISC</li><li>ASCE 7</li><li>UBC / ASTM / AASHTO</li><li>DGCS </li><li>BSDS</li></ul></article>
+    </div>
+  </div>
+</section>
+
+<section id="experience">
+  <div class="container">
+    <div class="eyebrow">04 — Experience</div>
+    <h2 class="section-title">Professional experience</h2>
+    <div class="timeline">
+      <article class="job">
+        <div class="job-date">August 2026 — Present</div><h3>Structural Engineer — Freelance</h3><div class="company">Rembox</div>
+        <ul><li>Prepare structural drawings, foundation plans, framing layouts, sections, and construction details in Revit.</li><li>Develop structural BIM models for foundations, columns, beams, slabs, and reinforcement.</li><li>Produce reinforcement drawings, rebar schedules, and material schedules for construction documentation.</li><li>Review structural models and drawings for dimensional accuracy and coordinate design revisions.</li></ul>
+      </article>
+      <article class="job">
+        <div class="job-date">May 2026 — Present</div><h3>Structural Engineer</h3><div class="company">Kyong-Ho Engineering & Architects Co., Ltd.</div>
+        <ul><li>Performed dike slope stability for approximately 27.64 km river improvement using GEO5 and PLAXIS, developing design recommendations to support structural stability. </li><li>Assisted in quantity estimation for bridges and related infrastructure, providing accurate quantities to support cost estimation and budgeting.</li><li>Prepared detailed engineering design of flood control infrastructure and bridges using AutoCAD, ensuring accurate representation of structural elements for river improvement works.</li><li>Assisted in road profile and cross-section alignments in Civil 3D, supporting accurate grading and construction-ready of preliminary road design.</li></ul>
+      </article>
+      <article class="job">
+        <div class="job-date">2025 — 2026</div><h3>Civil Design Engineer</h3><div class="company">SNPDRI Philippines Corporation</div>
+        <ul><li>Executed structural design analysis and evaluation for infrastructure projects, strictly enforcing compliance with engineering standards to eliminate design non-conformance during review.</li><li>Conducted soil investigation and geotechnical site assessments, analyzing subsurface data to optimize foundation design parameters and mitigate settlement risks.</li><li>Developed detailed engineering designs for transmission and substation facilities, applying precise drafting standards to deliver high-quality, construction-ready plan sets.</li><li>Coordinated design updates across engineering teams, keeping drawing versions aligned to avoid costly rework.</li><li>Reviewed technical drawings for errors, catching structural misalignments before construction started.</li><li>Prepared Bill of Quantities (BOQs), delivering highly accurate cost estimates that enhanced bidding competitiveness and procurement accuracy.</li></ul>
+      </article>
+      <article class="job">
+        <div class="job-date">2023 — 2025</div><h3>Structural Engineer</h3><div class="company">Hefty Power System Corporation</div>
+        <ul><li>Performed grouted rockwall design for slope protection using GEO5 and manual calculations in Excel, evaluating slope stability criteria to ensure structural compliance with stability standards.</li><li>Designed tubular and lattice towers for transmission and substation projects using STAAD.</li><li>Designed tubular and lattice towers for transmission and substation projects using STAAD, developing structural design recommendations based on load and stability requirements, delivering construction-ready designs.</li><li>Reviewed shop drawings and identified design issues, resolving discrepancies before fabrication to prevent costly errors and rework.</li><li>Assisted in BOQs using PlanSwift and Bluebeam, and costs estimates accurately to support on-time and competitive bid submissions.</li></ul>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="projects" class="grid-bg">
+  <div class="container">
+    <div class="projects-head">
+      <div><div class="eyebrow">05 — Selected Work</div><h2 class="section-title">Engineering portfolio</h2></div>
+      <div class="filters" id="filters"></div>
+    </div>
+    <p class="section-intro">A selection of structural, foundation, steel, building, civil infrastructure, and technical drawing work. Click a project to view its complete PDF.</p>
+    <div class="project-grid" id="projectGrid"></div>
+  </div>
+</section>
+
+<section id="resume" class="resume">
+  <div class="container">
+    <div class="eyebrow">06 — Resume</div>
+    <div class="resume-box">
+      <div><h2 class="section-title">Let's discuss your next project.</h2><p class="section-intro">Download my current resume for a detailed overview of my engineering experience, education, skills, and professional background.</p></div>
+      <a class="btn light" href="assets/resume/RESUME_Punginagina.pdf" target="_blank">Open Resume ↗</a>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="about-grid">
+      <div><div class="eyebrow">Education & Licensure</div><h2 class="section-title">Engineering foundation</h2></div>
+      <div>
+        <p><strong>Bachelor of Science in Civil Engineering</strong><br>Major in Structural Engineering<br>Technological Institute of the Philippines · 2018–2022</p>
+        <br><p><strong>Licensed Civil Engineer</strong><br>November 2022 · Professional Regulation Commission (PRC)</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="container contact-grid">
+    <div><div class="eyebrow">07 — Contact</div><h2 class="section-title">Available for remote engineering work.</h2><p class="section-intro">I am open to remote opportunities with international engineering firms, consultants, contractors, and clients requiring dependable civil and structural engineering support.</p><a class="btn primary" href="mailto:isalimgina@gmail.com">Email Me →</a></div>
+    <div class="contact-info">
+      <div class="contact-row"><small>Email</small><a href="mailto:isalimgina@gmail.com">isalimgina@gmail.com</a></div>
+      <div class="contact-row"><small>Phone</small><a href="tel:+639664162621">+63 966 416 2621</a></div>
+      <div class="contact-row"><small>Location</small><span>Metro Manila, Philippines</span></div>
+      <div class="contact-row"><small>Focus</small><span>Structural Design · Civil Infrastructure · Drafting · Quantity Estimates</span></div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="container footer-inner"><div><strong>JANISSAH PUNGINAGINA</strong> · Civil & Structural Engineer</div><div>© 2026 Janissah Punginagina</div></div>
+</footer>
+
+<div class="modal" id="pdfModal" role="dialog" aria-modal="true" aria-label="Project PDF viewer">
+  <div class="modal-box">
+    <div class="modal-head"><strong id="modalTitle">Project</strong><button class="close" aria-label="Close" onclick="closeModal()">×</button></div>
+    <iframe id="pdfFrame" title="Project PDF"></iframe>
+  </div>
+</div>
+
+<script>
+/* =========================================================
+   EDITABLE: PROJECT DATA
+   Add, remove, or update projects here.
+   PDF paths are relative to index.html.
+   ========================================================= */
+const projects = [
+  {title:"Bridge Design — Detailed Drawings & Calculations",category:"Civil Infrastructure",desc:"Bridge design documentation, detailed drawings, and engineering calculations.",pdf:"assets/projects/Bridge%20Design%20Detailed%20Drawing%20%26%20Calculation.pdf"},
+  {title:"Dike Embankment Slope Stability Analysis",category:"Civil Infrastructure",desc:"Slope stability analysis and supporting engineering documentation for a dike embankment.",pdf:"assets/projects/Dike%20Embankment%20Slope%20Stability%20Analysis.pdf"},
+  {title:"69kV Gantry & Earthing Mast",category:"Steel Structures",desc:"Gantry and earthing mast structural drawing package with elevations and technical details.",pdf:"assets/projects/69kv-gantry.pdf"},
+  {title:"138kV GIS Building",category:"Buildings",desc:"Structural drawing package including foundation plans, floor and roof plans, sections, and structural details.",pdf:"assets/projects/138kv-gis-building.pdf"},
+  {title:"Bored Pile",category:"Foundations",desc:"Bored pile elevation and section drawing.",pdf:"assets/projects/bored-pile.pdf"},
+  {title:"Control Building",category:"Buildings",desc:"Building structural drawings including plans, sections, foundations, and detailed structural components.",pdf:"assets/projects/control-building.pdf"},
+  {title:"Dug Foundation",category:"Foundations",desc:"Foundation drawing package showing foundation plans, sections, and foundation details.",pdf:"assets/projects/dug-foundation.pdf"},
+  {title:"Equipment Foundation",category:"Foundations",desc:"Pedestal layout, foundation plan and elevation, typical foundation details, and anchor bolt details.",pdf:"assets/projects/equipment-foundation.pdf"},
+  {title:"Equipment Steel Structure — Tubular",category:"Steel Structures",desc:"Tubular steel structure drawings with elevations, sections, anchor bolts, and connection details.",pdf:"assets/projects/equipment-steel-structure.pdf"},
+  {title:"Genset House Enclosure",category:"Buildings",desc:"Structural package including foundation plan, roof framing, sections, elevations, and details.",pdf:"assets/projects/genset-house-enclosure.pdf"},
+  {title:"Genset House",category:"Buildings",desc:"Building and equipment-support drawings including foundations, structural details, and canopy elements.",pdf:"assets/projects/genset-house.pdf"},
+  {title:"Grouted Rockwall",category:"Civil Infrastructure",desc:"Slope protection drawing package with typical sections, elevations, and structural details.",pdf:"assets/projects/grouted-rockwall.pdf"},
+  {title:"Guard House",category:"Buildings",desc:"Guard house structural package including foundation, roof framing, sections, and structural details.",pdf:"assets/projects/guard-house.pdf"},
+  {title:"Prefab Relay Van Drawing",category:"Detailing",desc:"Prefab relay van structural plans, sections, elevations, foundation, and connection details.",pdf:"assets/projects/prefab-relay-van.pdf"},
+  {title:"Warehouse",category:"Buildings",desc:"Warehouse structural drawings including foundation, floor and roof framing, sections, and baseplate details.",pdf:"assets/projects/warehouse.pdf"},
+  {title:"Water Tank Steel Structure",category:"Steel Structures",desc:"Steel structure drawings including elevations, sections, foundation, baseplate, and anchor bolt details.",pdf:"assets/projects/water-tank-steel-structure.pdf"},
+  {title:"Bid Cost Estimates",category:"Quantity Estimates",desc:"Bid cost estimate document.",pdf:"assets/projects/bid-cost-estimates.pdf"},
+  {title:"BOQ of Dug Foundation",category:"Quantity Estimates",desc:"Bill of quantities for dug foundation.",pdf:"assets/projects/boq-dug-foundation.pdf"},
+  {title:"BOQ of Pad and Chimney Foundation",category:"Quantity Estimates",desc:"Bill of quantities for pad and chimney foundation.",pdf:"assets/projects/boq-pad-and-chimney-foundation.pdf"}
+];
+
+const filters = ["All", ...new Set(projects.map(p => p.category))];
+
+function renderFilters(){
+  const box=document.getElementById("filters");
+  box.innerHTML=filters.map((f,i)=>`<button class="filter ${i===0?"active":""}" onclick="filterProjects('${f.replaceAll("'","\\'")}',this)">${f}</button>`).join("");
+}
+
+function renderProjects(list=projects){
+  const grid=document.getElementById("projectGrid");
+  grid.innerHTML=list.map((p,i)=>`
+    <article class="project">
+      <div class="project-preview">
+        <div class="blueprint" aria-hidden="true"></div>
+      </div>
+      <div class="project-body">
+        <div class="tag">${p.category}</div>
+        <h3>${p.title}</h3>
+        <p>${p.desc}</p>
+        <a class="project-link" href="#" onclick="openModal('${p.pdf}','${p.title.replaceAll("'","\\'")}');return false;">VIEW PROJECT →</a>
+      </div>
+    </article>`).join("");
+}
+
+function filterProjects(category,button){
+  document.querySelectorAll(".filter").forEach(b=>b.classList.remove("active"));
+  button.classList.add("active");
+  renderProjects(category==="All"?projects:projects.filter(p=>p.category===category));
+}
+
+function openModal(pdf,title){
+  document.getElementById("modalTitle").textContent=title;
+  document.getElementById("pdfFrame").src=pdf;
+  document.getElementById("pdfModal").classList.add("open");
+  document.body.style.overflow="hidden";
+}
+function closeModal(){
+  document.getElementById("pdfModal").classList.remove("open");
+  document.getElementById("pdfFrame").src="";
+  document.body.style.overflow="";
+}
+document.getElementById("pdfModal").addEventListener("click",e=>{if(e.target.id==="pdfModal")closeModal()});
+document.addEventListener("keydown",e=>{if(e.key==="Escape")closeModal()});
+
+function toggleMenu(){document.getElementById("navLinks").classList.toggle("open")}
+document.querySelectorAll(".nav-links a").forEach(a=>a.addEventListener("click",()=>document.getElementById("navLinks").classList.remove("open")));
+
+renderFilters();
+renderProjects();
+</script>
+</body>
+</html>
